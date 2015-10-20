@@ -16,13 +16,15 @@ To use this as a custom action in SourceTree on a Windows PC, do the following:
 3. Click ```Tools``` > ```Options```.
 4. Select the "Custom Actions" tab at the top of the dialog that opened.
 5. Click "Add".
-6. In the "Menu caption" field, put something like "Find unmerged changes to 
-   file".
+6. In the "Menu caption" field, put something like "Find remote changes not yet
+   merged to local develop".
 7. Turn on the "Show Full Output" option.
 8. Click the ```...``` browse button beside the "Script to run" field, select
    the ```find-branches_sourcetree-custom-action.bat``` file wherever you saved
    it to on your computer, and click "Open".
-9. In the "Parameters" field, put ```$REPO $FILE```.
+9. In the "Parameters" field, put the following:  
+   ```develop refs/remotes/origin/ $REPO $FILE```  
+   (For more information about these parameters, see below).
 10. Click "OK".
 11. Click "OK" to close the "Options" dialog.
 12. Close SourceTree (to finish updating the list of Custom Actions shown for
@@ -69,6 +71,21 @@ For example:
 
     Completed successfully.
 
+
+## Parameters for SourceTree Custom Action
+
+The parameters provided to the SourceTree custom action dialog follow this 
+pattern:
+
+1. The branch that the changes have NOT yet been merged back into.
+2. The pattern to use for getting the list of branches. This value is passed to 
+   the ```git for-each-ref``` command.
+   * To only list remote branches, use ```refs/remotes/origin/```.
+   * To list all branches, use ```refs/```.
+3. The string ```$REPO```, which SourceTree will replace with the root folder 
+   of the repository.
+4. The string ```$FILE```, which SourceTree will replace with the list of 
+   selected files (ideally only one).
 
 ## Notes
 
