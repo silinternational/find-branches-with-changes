@@ -43,3 +43,34 @@ changed (and which have not yet been merged back into develop)...
 
 After some text from Git, it should show the names of any branches where that
 file has changed.
+
+For example:
+
+    find-branches_sourcetree-custom-action.bat C:\Projects\find-branches-with-changes README.md
+    Welcome to Git (version 1.9.5-preview20141217)
+
+
+    Run 'git help git' to display the help index.
+    Run 'git help <command>' to display help for specific commands.
+
+
+
+
+
+    Branches where "README.md" has been changed (if any):
+
+    -----
+
+    feature/initial-working-version
+
+    -----
+    Done.
+
+
+    Completed successfully.
+
+
+**Note:** When you are done searching for a file, make sure you did not leave 
+anything typed into the search field. Otherwise, you may waste some time being 
+confused why you do not see the expected files in the staged/unstaged areas 
+when doing a commit.
