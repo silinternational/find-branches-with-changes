@@ -70,7 +70,12 @@ For example:
     Completed successfully.
 
 
-**Note:** When you are done searching for a file, make sure you did not leave 
-anything typed into the search field. Otherwise, you may waste some time being 
-confused why you do not see the expected files in the staged/unstaged areas 
-when doing a commit.
+## Notes
+
+* When you are done searching for a file, make sure you did not leave anything 
+  typed into the search field. Otherwise, you may waste some time being 
+  confused why you do not see the expected files in the staged/unstaged areas 
+  when doing a commit.
+* Selecting multiple files at a time will currently only return results for 
+  whichever file SourceTree passed to the script first, so it is best to do 
+  this one-at-a-time at the moment.
