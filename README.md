@@ -16,14 +16,14 @@ To use this as a custom action in SourceTree on a Windows PC, do the following:
 3. Click ```Tools``` > ```Options```.
 4. Select the "Custom Actions" tab at the top of the dialog that opened.
 5. Click "Add".
-6. In the "Menu caption" field, put something like "Find remote changes not yet
-   merged to local develop".
+6. In the "Menu caption" field, put something like "Find changes not yet merged
+   to local develop".
 7. Turn on the "Show Full Output" option.
 8. Click the ```...``` browse button beside the "Script to run" field, select
    the ```find-branches_sourcetree-custom-action.bat``` file wherever you saved
    it to on your computer, and click "Open".
 9. In the "Parameters" field, put the following:  
-   ```develop refs/remotes/origin/ $REPO $FILE```  
+   ```develop refs/ $REPO $FILE```  
    (For more information about these parameters, see below).
 10. Click "OK".
 11. Click "OK" to close the "Options" dialog.
